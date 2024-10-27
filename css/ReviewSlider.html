@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Review Slider</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .review-slider {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .review-slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 10px auto; /* Center the card horizontally */
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            min-width: 300px; /* Set a minimum width for the cards */
+            flex: 0 0 100%; /* Take full width for one card */
+        }
+
+        .review-card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 2px solid #308d46; /* Attractive border */
+        }
+
+        .stars {
+            color: gold;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #333;
+            cursor: pointer;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="review-slider">
+        <button class="arrow left-arrow">&#10094;</button>
+        <button class="arrow right-arrow">&#10095;</button>
+
+        <div class="review-slider-wrapper">
+            <!-- Sample cards -->
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 1">
+                <h3>Linda Galambos
+                    <br>
+                    Life Coach &
+                    Business Consultant
+                    </h3>
+                <div class="stars">★★★★★</div>
+                <p>I appreciate Sanjay's knowledge in crafting emails and running email campaigns. He understands how to market with email and how to grow email lists. He is professional and structured in his approach and diligent in what he does. Thanks, Sanjay!
+                </p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 2">
+                <h3>Zak Thulborn
+                    Mindset And Life Coach
+                    </h3>
+                <div class="stars">★★★★★</div>
+                <p>I highly recommend Sanjay for his exceptional expertise in marketing. His professionalism is evident in every interaction, demonstrating a deep understanding of the subject matter. Sanjay's approach is not only effective but also efficient, consistently delivering results that have significantly enhanced my email campaigns. His commitment to excellence and personalized guidance make him an invaluable asset to any marketing team.
+                </p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 3">
+                <h3>Debbie Spector Weisman
+                    Dream Life Coach
+                    </h3>
+                <div class="stars">★★★★☆</div>
+                <p>Sanjay has the ability to write without sounding too salesy or aggressive. His heart-centered approach guides the reader gently along, providing useful information and advice. The ask at the end sounds like the natural conclusion that piques the reader's curiosity to find out more.
+                </p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 4">
+                <h3>Priyanshi Bhatnagar
+                    <br>
+                    Founder- Detoxpri
+                    </h3>
+                <div class="stars">★★★★★</div>
+                <p>Sanjay wrote three persuasive emails for my business to book more calls. This involved showing how clients globally can change their lives through our nutrition programs and the services we offer. I was impressed by the results. I'll be using him again.</p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 5">
+                <h3>Shataun Rogers <br>
+                    Transformational and relationship coach
+                    </h3>
+                <div class="stars">★★★★☆</div>
+                <p>My recommendation for Sanjay is exceptional. It was a pleasure seeing him in action creating content very niche specific for me. it was quite impressive to work with him as he established my unique relationship field. He is professional, personable and swift, yet detailed and very focused. Highly, highly recommend him!</p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 6">
+                <h3>Jennifer Jehl <br>
+                    Life Coach
+                    </h3>
+                <div class="stars">★★★★★</div>
+                <p>Sanjay is an ACTION TAKER!!!! His ability to capture my voice and my goal and convey them to the right client was impeccable!!!! I highly suggest betting on Sanjay!!!! Thank you so much!!!!
+                </p>
+            </div>
+            <!-- <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 7">
+                <h3>User 7</h3>
+                <div class="stars">★★★★★</div>
+                <p>Best product I've ever bought!</p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 8">
+                <h3>User 8</h3>
+                <div class="stars">★★★★☆</div>
+                <p>Good, but could be better in quality.</p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 9">
+                <h3>User 9</h3>
+                <div class="stars">★★★★★</div>
+                <p>Exactly what I was looking for!</p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/80" alt="User 10">
+                <h3>User 10</h3>
+                <div class="stars">★★★★★</div>
+                <p>I'm very happy with my purchase.</p>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const cards = document.querySelectorAll('.review-card');
+        const totalCards = cards.length;
+
+        function updateSlider() {
+            const sliderWrapper = document.querySelector('.review-slider-wrapper');
+            const cardWidth = 100; // 100% for one card
+            const offset = -currentIndex * cardWidth; // Calculate the offset based on current index
+            sliderWrapper.style.transform = `translateX(${offset}%)`;
+        }
+
+        function scrollReviews(direction) {
+            if (direction === 'next') {
+                currentIndex += 1;
+                if (currentIndex >= totalCards) {
+                    currentIndex = totalCards - 1; // Stop at the last card
+                }
+            } else {
+                currentIndex -= 1;
+                if (currentIndex < 0) {
+                    currentIndex = 0; // Stop at the first card
+                }
+            }
+            updateSlider();
+        }
+
+        document.querySelector('.right-arrow').addEventListener('click', () => {
+            scrollReviews('next');
+        });
+
+        document.querySelector('.left-arrow').addEventListener('click', () => {
+            scrollReviews('prev');
+        });
+
+        updateSlider(); // Initial call to set the position
+    </script>
+</body>
+</html>
